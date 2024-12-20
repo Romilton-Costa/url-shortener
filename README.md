@@ -1,59 +1,105 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-</p>
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+   <h1 align="center">Link shortener - Encurtador de links</h1>
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+📖 Descrição
+Este projeto permite a criação de links encurtados e o redirecionamento de URLs de maneira eficiente. É ideal para aplicações web, relatórios analíticos ou qualquer cenário que necessite de links curtos e rastreáveis.
 
-## Description
+Principais Funcionalidades
+Criação de URLs encurtadas.
+Redirecionamento de links.
+Análise de acessos (ex.: cliques).
+API REST para integração com outros serviços.
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+<hr/>
 
-## Project setup
+⚙️ Pré-requisitos
+Antes de começar, você precisará ter os seguintes itens instalados na sua máquina:
 
-```bash
-$ npm install
-```
+Node.js (v16 ou superior)
+npm ou yarn
+Banco de dados (ex.: PostgreSQL, MySQL ou MongoDB)
 
-## Compile and run the project
+ Instalação
+Clone este repositório:
 
-```bash
-# development
-$ npm run start
+bash
+Copiar código
+git clone https://github.com/seu-usuario/link-shortener.git
+cd link-shortener
+Instale as dependências:
 
-# watch mode
-$ npm run start:dev
+bash
+Copiar código
+npm install
 
-# production mode
-$ npm run start:prod
-```
+🔧 Configuração
+Renomeie o arquivo .env.example para .env:
 
-## Run tests
+bash
+Copiar código
+mv .env.example .env
+Configure as variáveis de ambiente no arquivo .env:
 
-```bash
-# unit tests
-$ npm run test
+env
+Copiar código
+DATABASE_URL=postgresql://user:password@localhost:5432/link_shortener
+PORT=3000
+Execute as migrações do banco de dados (se aplicável):
 
-# e2e tests
-$ npm run test:e2e
+bash
+Copiar código
+npm run migration:run
+🚀 Uso
+Inicie o servidor:
 
-# test coverage
-$ npm run test:cov
-```
+bash
+Copiar código
+npm run start
+Acesse a aplicação em http://localhost:3000.
+
+Utilize a documentação da API (ex.: Swagger) em http://localhost:3000/api.
+
+📂 Estrutura do Projeto
+plaintext
+Copiar código
+src/
+├── app.module.ts        # Módulo principal
+├── link/                # Módulo de encurtamento de links
+│   ├── link.controller.ts
+│   ├── link.service.ts
+│   ├── link.entity.ts
+├── common/              # Módulos e utilitários compartilhados
+└── ...
+📖 Rotas da API
+POST /links
+Cria um novo link encurtado.
+
+Request Body:
+
+json
+Copiar código
+{
+  "url": "https://example.com"
+}
+Response:
+
+json
+Copiar código
+{
+  "shortUrl": "http://localhost:3000/abc123"
+}
+GET /:shortUrl
+Redireciona para a URL original.
+
+Exemplo: http://localhost:3000/abc123 → https://example.com
+🛠️ Tecnologias Utilizadas
+NestJS
+TypeScript
+Banco de Dados (ex.: PostgreSQL ou MongoDB)
+Swagger para documentação de APIs
+🤝 Contribuição
+Faça um fork do projeto.
+Crie uma branch com sua feature/bugfix: git checkout -b minha-feature.
+Commit suas alterações: git commit -m 'Minha nova feature'.
+Faça um push para a branch: git push origin minha-feature.
+Abra um Pull Request.
