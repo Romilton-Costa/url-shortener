@@ -1,38 +1,36 @@
 
    <h1 align="center">Link shortener - Encurtador de links</h1>
 
-📖 Descrição
+## 📖 Descrição
 Este projeto permite a criação de links encurtados e o redirecionamento de URLs de maneira eficiente. É ideal para aplicações web, relatórios analíticos ou qualquer cenário que necessite de links curtos e rastreáveis.
 
-Principais Funcionalidades
-Criação de URLs encurtadas.
-Redirecionamento de links.
-Análise de acessos (ex.: cliques).
-API REST para integração com outros serviços.
+## Principais Funcionalidades
+- Criação de URLs encurtadas.
+- Redirecionamento de links.
+- Análise de acessos (ex.: cliques).
+- API REST para integração com outros serviços.
 
-<hr/>
 
-⚙️ Pré-requisitos
+## ⚙️ Pré-requisitos
 Antes de começar, você precisará ter os seguintes itens instalados na sua máquina:
 
-Node.js (v16 ou superior)
-npm ou yarn
-Banco de dados (ex.: PostgreSQL, MySQL ou MongoDB)
+- Node.js (v16 ou superior)
+- npm ou yarn
+- Banco de dados (ex.: PostgreSQL, MySQL ou MongoDB)
 
- Instalação
+## Instalação
 Clone este repositório:
 
 bash
 Copiar código
-git clone https://github.com/seu-usuario/link-shortener.git
+git clone https://github.com/Romilton-Costa/url-shortener/
 cd link-shortener
 Instale as dependências:
 
-bash
-Copiar código
+```bash
 npm install
-
-🔧 Configuração
+```
+## 🔧 Configuração
 Renomeie o arquivo .env.example para .env:
 
 bash
@@ -59,7 +57,7 @@ Acesse a aplicação em http://localhost:3000.
 
 Utilize a documentação da API (ex.: Swagger) em http://localhost:3000/api.
 
-📂 Estrutura do Projeto
+## 📂 Estrutura do Projeto
 plaintext
 Copiar código
 src/
@@ -70,7 +68,7 @@ src/
 │   ├── link.entity.ts
 ├── common/              # Módulos e utilitários compartilhados
 └── ...
-📖 Rotas da API
+## 📖 Rotas da API
 POST /links
 Cria um novo link encurtado.
 
@@ -92,14 +90,8 @@ GET /:shortUrl
 Redireciona para a URL original.
 
 Exemplo: http://localhost:3000/abc123 → https://example.com
-🛠️ Tecnologias Utilizadas
+## 🛠️ Tecnologias Utilizadas
 NestJS
 TypeScript
 Banco de Dados (ex.: PostgreSQL ou MongoDB)
 Swagger para documentação de APIs
-🤝 Contribuição
-Faça um fork do projeto.
-Crie uma branch com sua feature/bugfix: git checkout -b minha-feature.
-Commit suas alterações: git commit -m 'Minha nova feature'.
-Faça um push para a branch: git push origin minha-feature.
-Abra um Pull Request.
