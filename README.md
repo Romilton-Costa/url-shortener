@@ -1,8 +1,8 @@
 
-   <h1 align="center">Link shortener - Encurtador de links</h1>
+   <h1 align="center">Link shortener</h1>
 
-## 📖 Descrição
-Este projeto permite a criação de links encurtados e o redirecionamento de URLs de maneira eficiente. É ideal para aplicações web, relatórios analíticos ou qualquer cenário que necessite de links curtos e rastreáveis.
+## 📖 Description
+This project allows you to create shortened links and redirect URLs efficiently. It is ideal for web applications, analytical reports or any scenario that requires short, trackable links.
 
 ## Principais Funcionalidades
 - Criação de URLs encurtadas.
@@ -92,7 +92,6 @@ Redireciona para a URL original.
 
 Exemplo: http://localhost:3000/abc123 → https://example.com
 ## 🛠️ Tecnologias Utilizadas
-NestJS
-TypeScript
-Banco de Dados (ex.: PostgreSQL ou MongoDB)
-Swagger para documentação de APIs
+- NestJS
+- TypeScript
+- Banco de Dados (ex.: PostgreSQL ou MongoDB)
