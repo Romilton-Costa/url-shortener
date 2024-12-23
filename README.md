@@ -20,11 +20,12 @@ Antes de começar, você precisará ter os seguintes itens instalados na sua má
 
 ## Instalação
 Clone este repositório:
-
-bash
-Copiar código
+```bash
 git clone https://github.com/Romilton-Costa/url-shortener/
+```
+```bash
 cd link-shortener
+```
 Instale as dependências:
 
 ```bash
@@ -33,33 +34,30 @@ npm install
 ## 🔧 Configuração
 Renomeie o arquivo .env.example para .env:
 
-bash
-Copiar código
+```bash
 mv .env.example .env
+```
 Configure as variáveis de ambiente no arquivo .env:
-
-env
-Copiar código
+```bash
 DATABASE_URL=postgresql://user:password@localhost:5432/link_shortener
-PORT=3000
+```
 Execute as migrações do banco de dados (se aplicável):
 
-bash
-Copiar código
+```bash
 npm run migration:run
+```
 🚀 Uso
 Inicie o servidor:
 
-bash
-Copiar código
+```bash
 npm run start
+```
 Acesse a aplicação em http://localhost:3000.
 
 Utilize a documentação da API (ex.: Swagger) em http://localhost:3000/api.
 
 ## 📂 Estrutura do Projeto
-plaintext
-Copiar código
+```plaintext
 src/
 ├── app.module.ts        # Módulo principal
 ├── link/                # Módulo de encurtamento de links
@@ -68,24 +66,27 @@ src/
 │   ├── link.entity.ts
 ├── common/              # Módulos e utilitários compartilhados
 └── ...
+```
 ## 📖 Rotas da API
 POST /links
 Cria um novo link encurtado.
 
 Request Body:
 
-json
-Copiar código
+```json
+
 {
   "url": "https://example.com"
 }
+```
 Response:
 
-json
-Copiar código
+```json
+
 {
   "shortUrl": "http://localhost:3000/abc123"
 }
+```
 GET /:shortUrl
 Redireciona para a URL original.
 
