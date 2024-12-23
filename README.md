@@ -4,72 +4,71 @@
 ## 📖 Description
 This project allows you to create shortened links and redirect URLs efficiently. It is ideal for web applications, analytical reports or any scenario that requires short, trackable links.
 
-## Principais Funcionalidades
-- Criação de URLs encurtadas.
-- Redirecionamento de links.
-- Análise de acessos (ex.: cliques).
-- API REST para integração com outros serviços.
+## Main Features
+- Creation of shortened URLs.
+- Link redirection.
+- Access analysis (e.g. clicks).
+- REST API for integration with other services.
 
 
-## ⚙️ Pré-requisitos
-Antes de começar, você precisará ter os seguintes itens instalados na sua máquina:
+## ⚙️ Prerequisites
+Before you begin, you will need to have the following items installed on your machine:
 
-- Node.js (v16 ou superior)
+- Node.js (v16 or upper)
 - npm ou yarn
-- Banco de dados (ex.: PostgreSQL, MySQL ou MongoDB)
 
-## Instalação
-Clone este repositório:
+## Installation
+Clone this repository:
 ```bash
 git clone https://github.com/Romilton-Costa/url-shortener/
 ```
 ```bash
 cd link-shortener
 ```
-Instale as dependências:
+Install dependencies:
 
 ```bash
 npm install
 ```
-## 🔧 Configuração
-Renomeie o arquivo .env.example para .env:
+## 🔧 settings
+Rename the file.env.example to .env:
 
 ```bash
 mv .env.example .env
 ```
-Configure as variáveis de ambiente no arquivo .env:
+Configure environment variables in the file .env:
 ```bash
 DATABASE_URL=postgresql://user:password@localhost:5432/link_shortener
 ```
-Execute as migrações do banco de dados (se aplicável):
+Run database migrations (if applicable):
 
 ```bash
 npm run migration:run
 ```
-🚀 Uso
-Inicie o servidor:
+🚀 Use
+Start the server:
 
 ```bash
 npm run start
 ```
-Acesse a aplicação em http://localhost:3000.
+Access the application in http://localhost:3000.
 
-Utilize a documentação da API (ex.: Swagger) em http://localhost:3000/api.
+Use the API documentation (ex.: Swagger) in http://localhost:3000/api.
 
-## 📂 Estrutura do Projeto
+## 📂 Project Structure
 ```plaintext
 src/
-├── app.module.ts        # Módulo principal
-├── link/                # Módulo de encurtamento de links
+├── app.module.ts        # Main module
+├── link/                # Link shortening module
 │   ├── link.controller.ts
 │   ├── link.service.ts
 │   ├── link.entity.ts
-├── common/              # Módulos e utilitários compartilhados
+├── common/              #Shared modules and utilities
 └── ...
 ```
-## 📖 Rotas da API
+## 📖 API routes
 POST /links
-Cria um novo link encurtado.
+Creates a new shortened link.
 
 Request Body:
 
@@ -88,10 +87,10 @@ Response:
 }
 ```
 GET /:shortUrl
-Redireciona para a URL original.
+Redirects to the original URL.
 
-Exemplo: http://localhost:3000/abc123 → https://example.com
-## 🛠️ Tecnologias Utilizadas
+Example: http://localhost:3000/abc123 → https://example.com
+## 🛠️ Technologies Used
 - NestJS
 - TypeScript
-- Banco de Dados (ex.: PostgreSQL ou MongoDB)
+
